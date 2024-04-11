@@ -1,5 +1,3 @@
-
-
 const countryList = {
     EUR: "FR",
     USD: "US",
@@ -82,17 +80,15 @@ btn.addEventListener("click",async (evt)=>{
         amtVal =1;
         amount.value =1;
     }
-    // console.log(fromCurr.value,toCurr.value);
+
     const URL = `https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_OqOMJguPwibRW68EOrcLMPoYwchxTNWeJ7NSomo7&currencies=${toCurr.value}&base_currency=${fromCurr.value}`;
     let response = await fetch(URL);
     let data = await response.json();
     Val = toCurr.value;
     let rate = data.data[Val];
-    // console.log(data.data[Val]);
-    // console.log(toCurr.value);
-
+ 
 
     let finalAmount = (amtVal * rate);
     msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`
-    // finalMsg.innerText = data.data;
+    /
 });
