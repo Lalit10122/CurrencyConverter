@@ -62,7 +62,7 @@ for(let select of  dropdowns){
     select.addEventListener("change",(evt) =>{
         updateFlag(evt.target);
     });
-}
+// }
 const updateFlag = (element)=>{
     let currCode = element.value;
     console.log('currCode:',currCode);
